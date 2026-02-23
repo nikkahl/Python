@@ -68,7 +68,6 @@ def find_anagram_indices(text: str, key: str) -> list[int]:
 
     target_freq = get_char_frequencies(key)
 
-    # Використовуємо ковзне вікно для пошуку збігів по частоті символів
     for i in range(text_len - key_len + 1):   #Off-by-one error range не включає задану межу тому +1
         window = text[i:i + key_len]        #0 до 0+5  рамки
         window_freq = get_char_frequencies(window)
