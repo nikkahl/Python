@@ -1,0 +1,51 @@
+[
+    {
+        "hours": 12,
+        "minutes": 0,
+        "seconds": 0,
+        "expected_angle": 0.0,
+        "description": "Північ/Полудень, стрілки разом"
+    },
+    {
+        "hours": 3,
+        "minutes": 0,
+        "seconds": 0,
+        "expected_angle": 90.0,
+        "description": "Рівно 3 година - прямий кут"
+    },
+    {
+        "hours": 6,
+        "minutes": 0,
+        "seconds": 0,
+        "expected_angle": 180.0,
+        "description": "Рівно 6 година - розгорнутий кут"
+    },
+    {
+        "hours": 9,
+        "minutes": 0,
+        "seconds": 0,
+        "expected_angle": 90.0,
+        "description": "9 година (270 градусів, але внутрішній кут 90)"
+    },
+    {
+        "hours": 12,
+        "minutes": 30,
+        "seconds": 0,
+        "expected_angle": 165.0,
+        "description": "12:30. Годинна стрілка вже не на 12, а посередині між 12 і 1"
+    },
+    {
+        "hours": 3,
+        "minutes": 30,
+        "seconds": 30,
+        "expected_angle": 75.25,
+        "description": "Складний час із секундами: 3:30:30"
+    },
+    {
+        "hours": 11,
+        "minutes": 59,
+        "seconds": 0,
+        "expected_angle": 5.5,
+        "description": "Майже 12 година"
+    }
+]
