@@ -1,0 +1,96 @@
+{
+    "name": "store_db",
+    "tables": {
+        "categories": {
+            "columns": [
+                {
+                    "name": "id",
+                    "data_type": "INTEGER",
+                    "nullable": true,
+                    "unique": true,
+                    "references": null
+                },
+                {
+                    "name": "name",
+                    "data_type": "STRING",
+                    "nullable": true,
+                    "unique": false,
+                    "references": null
+                }
+            ],
+            "rows": [
+                {
+                    "id": 1,
+                    "name": "Electronics"
+                },
+                {
+                    "id": 2,
+                    "name": "Clothing"
+                }
+            ],
+            "next_id": 3
+        },
+        "products": {
+            "columns": [
+                {
+                    "name": "id",
+                    "data_type": "INTEGER",
+                    "nullable": true,
+                    "unique": true,
+                    "references": null
+                },
+                {
+                    "name": "name",
+                    "data_type": "STRING",
+                    "nullable": true,
+                    "unique": false,
+                    "references": null
+                },
+                {
+                    "name": "price",
+                    "data_type": "FLOAT",
+                    "nullable": true,
+                    "unique": false,
+                    "references": null
+                },
+                {
+                    "name": "cat_id",
+                    "data_type": "INTEGER",
+                    "nullable": true,
+                    "unique": false,
+                    "references": [
+                        "categories",
+                        "id"
+                    ]
+                }
+            ],
+            "rows": [
+                {
+                    "id": 1,
+                    "name": "Laptop",
+                    "price": 1000.0,
+                    "cat_id": 1
+                },
+                {
+                    "id": 2,
+                    "name": "Mouse",
+                    "price": 50.0,
+                    "cat_id": 1
+                },
+                {
+                    "id": 3,
+                    "name": "T-Shirt",
+                    "price": 20.0,
+                    "cat_id": 2
+                },
+                {
+                    "id": 4,
+                    "name": "Keyboard",
+                    "price": 80.0,
+                    "cat_id": 1
+                }
+            ],
+            "next_id": 5
+        }
+    }
+}

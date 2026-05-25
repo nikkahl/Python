@@ -1,0 +1,80 @@
+{
+    "name": "company_db",
+    "tables": {
+        "departments": {
+            "columns": [
+                {
+                    "name": "id",
+                    "data_type": "INTEGER",
+                    "nullable": true,
+                    "unique": true,
+                    "references": null
+                },
+                {
+                    "name": "name",
+                    "data_type": "STRING",
+                    "nullable": false,
+                    "unique": false,
+                    "references": null
+                }
+            ],
+            "rows": [
+                {
+                    "id": 1,
+                    "name": "Engineering"
+                },
+                {
+                    "id": 2,
+                    "name": "Marketing"
+                }
+            ],
+            "next_id": 3
+        },
+        "employees": {
+            "columns": [
+                {
+                    "name": "id",
+                    "data_type": "INTEGER",
+                    "nullable": true,
+                    "unique": true,
+                    "references": null
+                },
+                {
+                    "name": "name",
+                    "data_type": "STRING",
+                    "nullable": false,
+                    "unique": false,
+                    "references": null
+                },
+                {
+                    "name": "dept_id",
+                    "data_type": "INTEGER",
+                    "nullable": true,
+                    "unique": false,
+                    "references": [
+                        "departments",
+                        "id"
+                    ]
+                }
+            ],
+            "rows": [
+                {
+                    "id": 101,
+                    "name": "Alice",
+                    "dept_id": 1
+                },
+                {
+                    "id": 102,
+                    "name": "Bob",
+                    "dept_id": 1
+                },
+                {
+                    "id": 103,
+                    "name": "Charlie",
+                    "dept_id": 2
+                }
+            ],
+            "next_id": 104
+        }
+    }
+}
